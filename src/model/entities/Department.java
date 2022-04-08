@@ -4,13 +4,11 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class Department implements Serializable {
-
-	private Integer id;
-	private String name;
+    private Integer id;
+    private String name;
 
     public Department() {
     }
-
     public Department(Integer id, String name) {
         this.id = id;
         this.name = name;
@@ -38,12 +36,12 @@ public class Department implements Serializable {
             return false;
         }
         Department department = (Department) o;
-        return Objects.equals(id, department.id) && Objects.equals(name, department.name);
+        return Objects.equals(id, department.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id);
     }
 
     @Override
@@ -53,5 +51,5 @@ public class Department implements Serializable {
             ", name='" + getName() + "'" +
             "}";
     }
-		
+
 }

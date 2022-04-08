@@ -1,6 +1,5 @@
 package gui;
 
-import java.io.Serializable;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
