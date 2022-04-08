@@ -10,4 +10,14 @@ public class Utils {
     public static Stage CurrentStage(ActionEvent event) {
         return (Stage) ((Node) event.getSource()).getScene().getWindow();
     }
+
+    public static Integer tryParseToInt(String str) {
+        try {
+            return Integer.parseInt(str);
+        }
+        // se não for número inteiro vai retornar null
+        catch (NumberFormatException e) {
+            return null;
+        }
+    }
 }
